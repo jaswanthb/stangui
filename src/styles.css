@@ -1,0 +1,474 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    padding-bottom: 30px;
+    position: relative;
+    min-height: 100%;
+    font-size: 14px;
+  }
+  
+  a {
+    transition: background 0.2s, color 0.2s;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: none;
+  }
+
+main {
+    margin-top: 50px;
+    margin-left: 150px;
+}
+h2 {
+  font-size: 22px;
+  margin-bottom: 0;
+}
+h4 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.profile i{
+    margin-right: 10px;
+  }
+  .btn-outline-primary{
+    border: 1px solid #000;
+    color: #000;
+    border-radius: 10px;
+  }
+  .btn-outline-primary:hover{
+    border: 1px solid #000;
+    background: #000;
+    color:#fff;
+  }
+  .btn-check:focus+.btn-outline-primary, .btn-outline-primary:focus{
+    box-shadow: none;
+  }
+  .form-label {
+   color: #333;
+   font-weight: 400;
+   display: block;
+}
+.form-select{
+    font-size: 14px;
+}
+
+
+.navbar-header ul{
+  list-style: none;
+  display: flex;
+}
+.bg-light{
+  background: #fff;
+  box-shadow: 2px 2px 14px rgb(0,0,0,0.5);
+  padding: 5px 0;
+}
+#wrapper {
+  padding-left: 0;
+  transition: all 0.5s ease;
+  position: relative;
+}
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #222;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+.sidebar-brand {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  text-align: center;
+  padding: 20px 0;
+}
+.sidebar-brand h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 24px;
+  color: #fff;
+}
+
+.sidebar-nav {
+  position: absolute;
+  /* top: 75px; */
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar-nav > li {
+  text-indent: 0px;
+  line-height: 25px;
+}
+.sidebar-nav > li a {
+  display: block;
+  text-decoration: none;
+  color: #757575;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 5px;
+  color: #fff;
+}
+.sidebar-nav > li > a:hover  {
+  text-decoration: none;
+  color: #fff;
+  background: #F8BE12;
+}
+.sidebar-nav > li i.fa {
+  font-size: 18px;
+  width: 30px;
+}
+
+#navbar-wrapper {
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+#wrapper.toggled #navbar-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+#navbar-wrapper .navbar {
+  border-width: 0 0 0 0;
+  background-color: #eee;
+  font-size: 24px;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+#navbar-wrapper .navbar a {
+  color: #757575;
+}
+#navbar-wrapper .navbar a:hover {
+  color: #F8BE12;
+}
+
+#content-wrapper {
+  position: relative;
+}
+#wrapper.toggled #content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+@media (min-width: 992px) {
+  #wrapper {
+    padding-left: 250px;
+  }
+  
+  #wrapper.toggled {
+    padding-left: 60px;
+  }
+
+  #sidebar-wrapper {
+    width: 150px;
+    top: 50px;
+  }
+  
+  #wrapper.toggled #sidebar-wrapper {
+    width: 60px;
+  }
+  
+  #wrapper.toggled #navbar-wrapper {
+    position: absolute;
+    margin-right: -190px;
+}
+  
+  #wrapper.toggled #content-wrapper {
+    position: absolute;
+    margin-right: -190px;
+  }
+
+  #navbar-wrapper {
+    position: relative;
+  }
+
+  #wrapper.toggled {
+    padding-left: 60px;
+  }
+
+  #content-wrapper {
+    position: relative;
+  }
+
+  #wrapper.toggled #navbar-wrapper,
+  #wrapper.toggled #content-wrapper {
+    position: relative;
+    margin-right: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #wrapper {
+    padding-left: 60px;
+  }
+
+  #sidebar-wrapper {
+    width: 250px;
+  }
+  
+#wrapper.toggled #navbar-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+  
+  #wrapper.toggled #content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+  }
+
+  #navbar-wrapper {
+    position: relative;
+  }
+
+  #wrapper.toggled {
+    padding-left: 250px;
+  }
+
+
+  #wrapper.toggled #navbar-wrapper,
+  #wrapper.toggled #content-wrapper {
+    position: relative;
+    margin-right: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  #wrapper {
+    padding-left: 0;
+  }
+
+  #sidebar-wrapper {
+    width: 0;
+  }
+
+
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+  }
+  #wrapper.toggled #navbar-wrapper {
+    position: absolute;
+    margin-right: -250px;
+  }
+
+  #wrapper.toggled #content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+  }
+
+  #navbar-wrapper {
+    position: relative;
+  }
+
+  #wrapper.toggled {
+    padding-left: 250px;
+  }
+
+
+  #wrapper.toggled #navbar-wrapper,
+  #wrapper.toggled #content-wrapper {
+    position: relative;
+    margin-right: 250px;
+  }
+}
+
+.active-link {
+  background-color: #F8BE12;
+}
+
+
+.client_forms .row{
+  margin: 20px;
+}
+.client_forms .profile{
+  margin-top: 7%;
+}
+.client_forms .profile{
+    background: #000;
+    color: #fff;
+}
+.client_table{
+  padding: 30px;
+}
+.client_table .fa-edit{
+  vertical-align: middle;
+  color: blue;
+  margin-right: 5px;
+}
+.client_table .fa-trash{
+  vertical-align: middle;
+  color: red;
+  margin-left: 5px;
+}
+
+
+
+.nav-tabs .nav-link{
+  color: #000;
+  font-weight: 600;
+}
+.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+  border-top: 2px solid #000;
+}
+.form-switch .form-check-input{
+  width: 30px;
+  height: 20px;
+  margin-top: 10px;
+}
+.form-switch label{
+  margin: 7px;
+  color: #000;
+  font-weight: 600;
+  
+}
+.tab-content  .row{
+  margin: 20px 0;
+}
+.createuser_bottombtn{
+  float: right;
+}
+.createuser_bottombtn .btn-danger{
+margin: 0 10px;
+}
+.createuser_bottombtn .btn i{
+  margin-right: 10px;
+  }
+  table {
+    border: 1px solid #ccc;
+  }
+  tbody, td, tfoot, th, thead, tr{
+    border-right: 1px solid #ccc;
+  }
+  
+  legend {
+    float: none;
+    width: auto;
+    padding: 0 20px;
+    margin-bottom: 0.5rem;
+    font-size: 20px;
+    line-height: inherit;
+}
+fieldset {    
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  min-inline-size: min-content;
+  border-width: 2px;
+  border-style: groove;
+  border-color: rgb(192, 192, 192);
+  border-image: initial;
+}
+.form-check{
+  margin-bottom: 1.125rem;
+}
+.createuser_bottombtn{
+  float: right;
+}
+.createuser_bottombtn .btn-danger{
+margin: 0 10px;
+}
+.createuser_bottombtn .btn i{
+  margin-right: 10px;
+  }
+
+  .createclient_forms  .row{
+    margin: 20px 0;
+  }
+
+  textarea {
+    width: 100%;
+}
+.form-control, .form-select {
+  margin: 10px 0;
+}
+
+.img-sm {
+  width: 30px;
+}
+.ulstyles a{
+  line-height: 2.5;
+  text-decoration: none;
+  color: #333;
+}
+
+.para-1 {
+  padding: 10px;
+}
+
+.ulstyles li:hover {
+  background-color: rgba(0, 0 , 0, 0.05);
+}
+.ulstyles li:hover a{
+  color: blue;
+}
+.box-shadow1 {
+  box-shadow: 2px 2px 10px 10px rgba(0, 0 , 0, 0.05);
+}
+.targettable i{
+  margin-right: 20px;
+  font-size: 18px;
+  display: inline;
+}
+.targettable .fa-trash{
+  color: red;
+}
+.targettable .fa-edit{
+  color: blue;
+}
+.targettable .fa-lock{
+  color: orange;
+}
+.input_range{
+  max-width: 80px;    
+  padding-left: 5px;
+  padding-right: 5px;
+  min-width: 50px;
+}
+.quotas_items_main{
+  padding-left: 0;
+}
+.quotas_items_main li {
+  display:inline;    
+  margin: 10px;
+}
+.quotas_items_main .form-check{
+  display: inline-block;
+}
+.quotas_items_main{
+  margin: 10px;
+}
+.quotas_items_main label{
+  margin-right: 5px;
+}
+.quotas_items_main a {
+  color: #000;
+  text-decoration: none;
+}
+.quotas_items_main a i{
+  margin-left: 10px;
+}
+.Targeting_box {
+  box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.15);
+  max-height: 250px;
+  overflow-y: auto;
+  margin-top: 15px;
+  padding: 5px;
+}
+.Targeting_box h4{
+background-color: #62a8ea;
+  color: #fff;
+  padding: 5px;
+  font-size: 18px;
+}

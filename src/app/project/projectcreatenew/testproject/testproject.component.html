@@ -1,0 +1,77 @@
+
+<div class="container" >
+
+    <div class="survreybox"> 
+    <div class="col-sm-6" *ngIf="div1"> 
+        <div class="my-3">
+            <label for="inputtext" class="form-label">   Select your country of residence </label>
+
+            <select id="inputState" class="form-select mt-3" [(ngModel)]="selectedValue">
+
+                <option *ngFor="let option of options" [value]="option.id">
+  
+                    {{option.name}}    
+  
+                </option>
+              </select>   
+          </div>
+
+          <button class="btn btn-primary mt-3" (click)="div2Function()" >Continue </button>      
+
+    </div>
+
+    <div class="col-sm-6" *ngIf="div2"> 
+        <div class="my-3">
+            <label for="inputtext" class="form-label">   What is your Gender? </label>
+
+            <div class="form-check mt-3">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Male
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                 Female
+                </label>
+              </div>
+
+         
+          </div>
+
+          <button class="btn btn-primary mt-3" (click)="div3Function()">Continue </button>      
+
+    </div>
+
+    <div class="col-sm-6" *ngIf="div3"> 
+        <div class="my-3">
+            <label for="inputtext" class="form-label">  What is your Age? </label>            
+              
+                <input type="text" class="form-control" id="inputtext">         
+
+         
+          </div>
+
+          <button class="btn btn-primary mt-3" (click)="div4Function()">Continue </button>      
+
+    </div>
+
+    <div id="dvMessage" class="col-sm-10" *ngIf="div4">
+        <h4 class="text-center border-bottom pb-2">We're sending you to the survey but before you go…</h4>
+        <h6 class="">Be sure to follow these simple rules to ensure you’ll be rewarded for this survey and get invited to future surveys:</h6>
+       
+            <h4 class="">1.Take your time</h4>
+            <p class="">Our clients are often making multi-million and sometimes multi-billion dollar decisions based on your answers. Take your time and give well considered answers. If you're asked to give a written response put meaningful effort into it and ensure your answer is spelled correctly.</p>
+     
+        <h4 class="">2. Be truthful!</h4>
+        <p class=""> Do not misrepresent details about your personal or work life in order to qualify for this survey. We and our clients review all answers carefully and are able to spot inconsistent and untruthful responses. Participants found to provide untruthful responses will not receive rewards for participating in this survey and may face account suspension.</p>
+
+        <button class="btn btn-primary"> Start Survey </button>
+
+    </div>
+
+
+
+</div>
+</div>

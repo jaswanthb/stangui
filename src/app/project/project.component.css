@@ -1,0 +1,7 @@
+.project_table tbody, td, tfoot, th, thead, tr{
+    font-size: 11px !important;
+  }
+  .project_forms .row{
+    margin: 20px 0;
+  }
+  

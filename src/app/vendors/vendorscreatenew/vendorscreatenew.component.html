@@ -1,0 +1,256 @@
+<app-navabr> </app-navabr>
+<div class="clearfix border-bottom p-4">
+    <div class="float-start">  <h2 class="mb-0">Create Vendor </h2> </div>    
+  </div>
+  <section class="createclient_forms p-4">
+    <form action="/action_page.php">
+        <fieldset>
+         <legend>Contact/Billing</legend>
+         <div class="row">
+          <div class="col-md-3">
+            <label for="inputtext" class="form-label"> Vendor Name</label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>
+          <div class="col-md-3">
+            <label for="inputtext" class="form-label"> Contact Person Name</label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>
+          <div class="col-md-3">
+            <label for="inputtext" class="form-label"> Contact Person Phone No</label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>
+          <div class="col-md-3">
+            <label for="inputEmail4" class="form-label">Contact Person Email Address</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+        </div>
+          <div class="row">
+          <div class="col-md-3">
+            <label for="inputEmail4" class="form-label">Billing Contact Email Address</label>
+            <input type="email" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-3">
+            <label for="inputtext" class="form-label"> Address 1</label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>
+          <div class="col-md-3">
+            <label for="inputtext" class="form-label"> Address 2</label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>
+          <div class="col-md-3">
+            <label for="inputtext" class="form-label"> City</label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <label for="inputPassword4" class="form-label">Country</label>
+            <select id="inputState" class="form-select" >
+
+                <option *ngFor="let option of options" [value]="option.id">
+                    {{option.name}}      
+                </option>
+              </select>
+          </div>
+          <div class="col-md-3">
+            <label for="inputtext" class="form-label"> Zip Code</label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>
+          <div class="col-md-3">
+            <label for="inputEmail4" class="form-label">Lead Source</label>
+            <select id="inputState" class="form-select" >
+
+                <option *ngFor="let option of options" [value]="option.id">
+                    {{option.name}}      
+                </option>
+              </select>
+          </div>
+          <div class="col-md-3">
+            <label for="inputPassword4" class="form-label">Contact Type</label>
+            <select id="inputState" class="form-select" >
+
+                <option *ngFor="let option of options" [value]="option.id">
+                    {{option.name}}      
+                </option>
+              </select>
+          </div>
+         
+        </div>
+        </fieldset>
+       </form>
+  </section>
+  
+  <section class="px-4">
+  <div class="form-check form-switch">
+    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+    <label class="form-check-label" for="flexSwitchCheckDefault">Override Address CheckBox</label>
+  </div>
+  </section>
+  
+  <section class="createclient_forms p-4">
+    <form action="/action_page.php">
+        <fieldset>
+         <legend>Ownership</legend>
+        
+        <div class="row">
+          <div class="col-md-3">
+            <label for="inputPassword4" class="form-label">Sales Executive</label>
+            <select id="inputState" class="form-select" >
+
+                <option *ngFor="let option of options" [value]="option.id">
+                    {{option.name}}      
+                </option>
+              </select>
+          </div>
+          
+          <div class="col-md-3">
+            <label for="inputEmail4" class="form-label">Region</label>
+            <select id="inputState" class="form-select" >
+
+                <option *ngFor="let option of options" [value]="option.id">
+                    {{option.name}}      
+                </option>
+              </select>
+          </div>
+          <div class="col-md-3">
+            <label for="inputPassword4" class="form-label">Payment Net Terms</label>
+            <select id="inputState" class="form-select" >
+
+                <option *ngFor="let option of options" [value]="option.id">
+                    {{option.name}}      
+                </option>
+              </select>
+          </div>
+         
+        </div>
+        </fieldset>
+       </form>
+  </section>
+  
+  
+  <section class="createclient_forms p-4">
+    <form action="/action_page.php">
+        <fieldset>
+         <legend>Bidding</legend>
+        
+        <div class="row">
+          <div class="col-md-3">
+            <label for="inputPassword4" class="form-label">Vendor Type</label>
+            <select id="inputState" class="form-select" >
+
+                <option *ngFor="let option of options" [value]="option.id">
+                    {{option.name}}      
+                </option>
+              </select>
+          </div>
+          <div class="col-md-3">
+            <label for="inputtext" class="form-label"> PMF</label>
+            <input type="text" class="form-control" id="inputtext"> 
+          </div>
+          
+          <div class="col-md-3">
+            <label for="inputEmail4" class="form-label">Currency</label>
+            <select id="inputState" class="form-select" >
+
+                <option *ngFor="let option of options" [value]="option.id">
+                    {{option.name}}      
+                </option>
+              </select>
+          </div>
+          <div class="col-md-3">
+            <label for="inputPassword4" class="form-label">Rebate %</label>
+            <select id="inputState" class="form-select" >
+                <option *ngFor="let option of options" [value]="option.id">
+                    {{option.name}}      
+                </option>
+              </select>
+          </div>
+        </div>
+          <div class="row">
+          <div class="col-md-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+         
+        </div>
+        </fieldset>
+       </form>
+  </section>
+  
+  <section class="createclient_forms p-4">
+    <form action="/action_page.php">
+        <fieldset>
+         <legend>Fielding Info</legend>
+         <div class="row">
+           <div class="col-md-3">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            <label class="form-check-label" for="flexSwitchCheckDefault">Ful Crum Allowed</label>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            <label class="form-check-label" for="flexSwitchCheckDefault">River Allowed</label>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            <label class="form-check-label" for="flexSwitchCheckDefault">Router Allowed</label>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+            <label class="form-check-label" for="flexSwitchCheckDefault">Partner Sample Allowed</label>
+          </div>
+        </div>
+         </div>
+        <div class="row">
+          <div class="col-md-3">
+            <label for="inputEmail4" class="form-label">Partners to Avoid</label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>
+          <div class="col-md-3">
+            <label for="inputPassword4" class="form-label">Partner Revenue Share</label>
+            <select id="inputState" class="form-select">
+
+                <option *ngFor="let option of options" [value]="option.id">
+                    {{option.name}}      
+                </option>
+              </select>
+          </div>
+               
+          <div class="col-md-3">
+            <label for="inputPassword4" class="form-label">Reporting tool</label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>     
+          <div class="col-md-3">
+            <label for="inputPassword4" class="form-label">Reporting tool user name</label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3">
+            <label for="inputPassword4" class="form-label">Reporting tool password</label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>
+        </div>
+        </fieldset>
+       </form>
+  </section>
+  
+  <section class="px-4">
+    <div class="form-check form-switch">
+      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+      <label class="form-check-label" for="flexSwitchCheckDefault">Enable Postback</label>
+    </div>
+    </section>
+  
+    <section class="p-4">
+      <div class="createuser_bottombtn">
+        <a href="#" class="btn btn-danger"><i class="fa fa-close"></i>Cancel</a> 
+        <a href="#" class="btn btn-success"><i class="fa fa-check"></i>Save</a> 
+    </div>
+    </section>

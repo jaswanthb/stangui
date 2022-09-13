@@ -1,0 +1,65 @@
+<app-navabr> </app-navabr>
+<div class="clearfix border-bottom p-4">
+    <div class="float-start">  <h2 class="mb-0">Vendors</h2> </div>    
+    <div class="float-end"><a [routerLink]="['/vendors/vendorscreatenew']"  class="btn btn-outline-primary profile"><i class="fa fa-plus"></i>Create New</a>  </div>
+  </div>
+  <section class="client_forms">
+  <div class="row">
+    <div class="col-md-3">
+        <label for="inputtext" class="form-label"> Vendor Name</label>
+        <input type="text" class="form-control" id="inputtext">
+      </div>
+    <div class="col-md-3">
+      <label for="inputEmail4" class="form-label">Email Address</label>
+      <input type="email" class="form-control" id="inputEmail4">
+    </div>
+   
+    <div class="col-md-3">
+      <label for="inputEmail4" class="form-label">Is Enabled</label>
+      <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+        <option *ngFor="let option of options" [value]="option.id">
+            {{option.name}}      
+        </option>
+      </select>
+    </div>
+    <div class="col-md-3">
+        <a href="#" class="btn btn-outline-primary profile"><i class="fa fa-search"></i>Search</a> 
+    </div>
+  </div>
+  </section>
+
+    
+  <section class="client_table">
+    <div class="table-responsive">
+  <table #dTable class="table table-striped" style="width:100%" >
+    <thead>
+        <tr>
+            <th> Vendor Name </th>
+            <th> Vendor Url</th>
+            <th>  Email Address </th>
+            <th> Is Enabled </th>
+            <th> Created Date </th>
+            <th> Actions </th>
+        </tr>
+
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let VendorData of datatables">
+            <td> {{VendorData.VendorName}} </td>
+            <td> {{ VendorData.VendorUrl}}</td>
+            <td> {{ VendorData.EmailAddress}}</td>
+            <td>{{ VendorData.IsEnabled}} </td>
+            <td> {{ VendorData.CreatedDate}}</td>
+            <td><i class="fa fa-edit" ngbTooltip="Edit"></i> | <i class="fa fa-trash" ngbTooltip="Delete"></i> </td>           
+        </tr>
+      
+        
+    </tbody>
+    <tfoot>
+    
+  </tfoot>
+</table>
+</div>
+</section>

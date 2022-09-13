@@ -1,0 +1,12 @@
+.survreybox .col-sm-6, .survreybox .col-sm-10 {
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+#dvMessage h4, #dvMessage h6 {
+    color: brown;
+    margin: 10px 0;
+}
+.survreybox {
+    margin: 0 auto;
+}

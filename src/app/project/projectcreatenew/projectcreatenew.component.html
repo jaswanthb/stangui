@@ -1,0 +1,2583 @@
+<app-navabr> </app-navabr>
+<div class="clearfix border-bottom p-4">
+    <div class="float-start">  <h4 class="mb-0">Test</h4> </div>    
+    <div class="float-end">  <h4 class="mb-0"> Project # : <strong>226618</strong></h4> </div>  
+  </div>
+  <section class="p-4">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="Project-tab" data-bs-toggle="tab" data-bs-target="#Project" type="button" role="tab" aria-controls="Project" aria-selected="true">Project Details</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="Targets-tab" data-bs-toggle="tab" data-bs-target="#Targets" type="button" role="tab" aria-controls="Targets" aria-selected="false">Targets</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="Prescreener-tab" data-bs-toggle="tab" data-bs-target="#Prescreener" type="button" role="tab" aria-controls="Prescreener" aria-selected="false">Prescreener</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="Quotas-tab" data-bs-toggle="tab" data-bs-target="#Quotas" type="button" role="tab" aria-controls="Quotas" aria-selected="false">Quotas</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="Actions-tab" data-bs-toggle="tab" data-bs-target="#Actions" type="button" role="tab" aria-controls="Actions" aria-selected="false">Actions</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="Project" role="tabpanel" aria-labelledby="Project-tab">
+      <div class="row">
+        <div class="col-md-4">
+          <label for="inputPassword4" class="form-label">Project Manager</label>
+          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+            <option *ngFor="let option of options" [value]="option.id">
+                {{option.name}}      
+            </option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="inputEmail4" class="form-label">Secondary Project Manager</label>
+          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+            <option *ngFor="let option of options" [value]="option.id">
+                {{option.name}}      
+            </option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="inputPassword4" class="form-label">Client</label>
+          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+            <option *ngFor="let option of options" [value]="option.id">
+                {{option.name}}      
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="inputPassword4" class="form-label">Survey Status</label>
+          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+            <option *ngFor="let option of options" [value]="option.id">
+                {{option.name}}      
+            </option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="inputPassword4" class="form-label">Survey Type</label>
+          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+            <option *ngFor="let option of options" [value]="option.id">
+                {{option.name}}      
+            </option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="inputtext" class="form-label"> Survey Name</label>
+          <input type="text" class="form-control" id="inputtext">
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="inputtext" class="form-label"> Survey Length (Minutes)</label>
+          <input type="text" class="form-control" id="inputtext">
+        </div>
+        <div class="col-md-4">
+          <label for="inputtext" class="form-label"> IR</label>
+          <input type="text" class="form-control" id="inputtext">
+        </div>
+        <div class="col-md-4">
+          <label for="inputtext" class="form-label"> CPI</label>
+          <input type="text" class="form-control" id="inputtext">
+        </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <label for="inputtext" class="form-label"> Bid Revenue (USD)</label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>
+          <div class="col-md-4">
+            <label for="inputtext" class="form-label"> Booked Revenue (USD)</label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>
+          <div class="col-md-4">
+            <label for="inputtext" class="form-label"> Projected Revenue (USD)</label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <label for="inputPassword4" class="form-label">Projected Invoicing Month</label>
+              <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+                <option *ngFor="let option of options" [value]="option.id">
+                    {{option.name}}      
+                </option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="inputEmail4" class="form-label">Survey Category</label>
+              <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+                <option *ngFor="let option of options" [value]="option.id">
+                    {{option.name}}      
+                </option>
+              </select>
+            </div>
+            <div class="col-md-4">
+              <label for="inputPassword4" class="form-label">Project Type</label>
+              <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+                <option *ngFor="let option of options" [value]="option.id">
+                    {{option.name}}      
+                </option>
+              </select>
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-md-4">
+                <label for="inputPassword4" class="form-label">Partner Revenue Share</label>
+                <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+              </div>
+              <div class="col-md-4">
+                <label for="inputtext" class="form-label"> Requested N</label>
+                <input type="text" class="form-control" id="inputtext">
+              </div>
+              <div class="col-md-4">
+                <label for="inputtext" class="form-label"> Quoted N</label>
+                <input type="text" class="form-control" id="inputtext">
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="inputtext" class="form-label"> Commissioned N</label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputtext" class="form-label"> Success Reward (USD)</label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+                <div class="col-md-4">
+                  <label for="inputtext" class="form-label"> Bid Date</label>
+                  <input type="date" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <label for="inputtext" class="form-label"> Open Date</label>
+                    <input type="date" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputtext" class="form-label"> Closed Date</label>
+                    <input type="date" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  </div>
+                  <div class="col-md-4">
+                    <label for="inputtext" class="form-label"> Internal Project Number</label>
+                    <input type="text" class="form-control" id="inputtext">
+                  </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <label for="inputtext" class="form-label"> Fixed Reward Amount (USD)</label>
+                      <input type="text" class="form-control" id="inputtext">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputtext" class="form-label"> Mlab/Internal P&H Cost</label>
+                      <input type="text" class="form-control" id="inputtext">
+                    </div>
+                    <div class="col-md-4">
+                      <label for="inputtext" class="form-label"> P&H Cost to Client</label>
+                      <input type="text" class="form-control" id="inputtext">
+                    </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="inputtext" class="form-label"> Preliminary Complete Quota</label>
+                        <input type="text" class="form-control" id="inputtext">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="inputtext" class="form-label"> Desired Open Date (Ex: mm/dd/yyyy hh:mm:a (a: AM/PM))</label>
+                        <input type="date" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="inputtext" class="form-label"> Desired End Date (Ex: mm/dd/yyyy hh:mm:a (a: AM/PM))</label>
+                        <input type="date" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label for="inputPassword4" class="form-label">Sales Person</label>
+                          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+                            <option *ngFor="let option of options" [value]="option.id">
+                                {{option.name}}      
+                            </option>
+                          </select>
+                        </div>
+                        <div class="col-md-4">
+                          <label for="inputEmail4" class="form-label">Bid Created By</label>
+                          <input type="text" class="form-control" id="inputtext">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="inputPassword4" class="form-label">Re-Assign</label>
+                          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+                            <option *ngFor="let option of options" [value]="option.id">
+                                {{option.name}}      
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label for="inputtext" class="form-label"> Federated Project Id</label>
+                          <input type="text" class="form-control" id="inputtext">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="inputtext" class="form-label"> Invitation Subject</label>
+                          <input type="text" class="form-control" id="inputtext">
+                        </div>
+                        <div class="col-md-4">
+                          <label for="inputtext" class="form-label"> Re-Invitation Subject</label>
+                          <input type="text" class="form-control" id="inputtext">
+                        </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-4">
+                            <label for="inputtext" class="form-label"> Survey URL</label>
+                            <textarea name="" id="" rows="3"></textarea>
+                           
+                          </div>
+                          <div class="col-md-4">
+                            <label for="inputtext" class="form-label"> Federated URL - Standalone link</label>
+                            <textarea name="" id="" rows="3"></textarea>
+                          </div>
+                          </div>
+                            <div class="row">
+                          <div class="col-md-6">
+                            <label for="inputtext" class="form-label"> Fielding Notes</label>
+                          
+                            <ckeditor
+                            #editor
+                            [(ngModel)]="model.description"
+                            id="description"
+                            name="description"
+                            [config]="{ extraPlugins: 'divarea' }"
+                          >
+                          </ckeditor>
+                          
+
+                          </div>
+
+
+                          <div class="col-md-6">
+                            <label for="inputtext" class="form-label"> Project Specs</label>
+                         
+                            <ckeditor
+                            #editor
+                            [(ngModel)]="model.description"
+                            id="description"
+                            name="description"
+                            [config]="{ extraPlugins: 'divarea' }"
+                          >
+                          </ckeditor>
+
+                          </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <label for="inputtext" class="form-label"> Invitation Email Content </label>
+                            
+                          
+                              <ckeditor
+                              #editor
+                              [(ngModel)]="model.description"
+                              id="description"
+                              name="description"
+                              [config]="{ extraPlugins: 'divarea' }"
+                            >
+                            </ckeditor>
+  
+                            </div>
+  
+  
+                            <div class="col-md-6">
+                              <label for="inputtext" class="form-label"> Re-Invitation Email Content </label>
+                           
+                              <ckeditor
+                            #editor
+                            [(ngModel)]="model.description"
+                            id="description"
+                            name="description"
+                            [config]="{ extraPlugins: 'divarea' }"
+                          >
+                          </ckeditor> 
+  
+                            </div>
+                            </div>
+
+  <h2>Survey Settings</h2>
+                          <div class="row">
+                            <div class="col-md-4">
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Allow multiple survey entries</label>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Ip2Country Check (Internal Members)</label>
+                              </div>
+                            </div>
+                            <div class="col-md-4">
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                                <label class="form-check-label" for="flexSwitchCheckDefault">Ip2Country Check (External Members)</label>
+                              </div>
+                            </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                                  <label class="form-check-label" for="flexSwitchCheckDefault">Router On</label>
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                                  <label class="form-check-label" for="flexSwitchCheckDefault">Enable Recaptcha</label>
+                                </div>
+                              </div>
+                              <div class="col-md-4">
+                                <div class="form-check form-switch">
+                                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                                  <label class="form-check-label" for="flexSwitchCheckDefault">Allow River</label>
+                                </div>
+                              </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-4">
+                                  <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Require Verity validated respondents</label>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Require RelevantID validated respondents</label>
+                                  </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Require Verity 6</label>
+                                  </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-4">
+                                    <div class="form-check form-switch">
+                                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                                      <label class="form-check-label" for="flexSwitchCheckDefault">Allow Projects API</label>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <div class="form-check form-switch">
+                                      <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                                      <label class="form-check-label" for="flexSwitchCheckDefault">Enable Auto Fielding</label>
+                                    </div>
+                                  </div>
+                                 
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-md-4">
+                                      <label for="inputPassword4" class="form-label">Survey Traffic Type</label>
+                                      <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+                                        <option *ngFor="let option of options" [value]="option.id">
+                                            {{option.name}}      
+                                        </option>
+                                      </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                      <label for="inputEmail4" class="form-label">Priority</label>
+                                      <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+                                        <option *ngFor="let option of options" [value]="option.id">
+                                            {{option.name}}      
+                                        </option>
+                                      </select>
+                                    </div>
+                                   
+                                  </div>
+                                  <h2>Balancing Settings</h2>
+                                  <div class="m-3">
+                                  <span class="me-3">Quota Type : </span>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Completes</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">Accesses</label>
+                                  </div>
+                                </div>
+                                  <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />
+                                    <label class="form-check-label" for="flexSwitchCheckDefault">Balancing On</label>
+                                  </div>
+                                  <div class="p-4">
+                                    <div class="createuser_bottombtn">
+                                      <a href="#" class="btn btn-danger"><i class="fa fa-close"></i>Cancel</a> 
+                                      <a href="#" class="btn btn-success"><i class="fa fa-check"></i>Save</a> 
+                                  </div>
+                                </div>
+    </div>
+    <div class="tab-pane fade" id="Targets" role="tabpanel" aria-labelledby="Targets-tab"> 
+
+      <div class="my-2"> 
+<small> 
+  Note -Available:Available Counts, RF:RelevantID Failed, VF:VerityID Failed, DF:Device Fails, OQ:Over Quotas, FC:Final Completes, RC:Response Rate, IR:Actual IR,DR:Drop Rate, CUR:Completes Under Review, SAC:SMS Available Counts, QSF:Quality Sentinel Fail(RF+VF+Dupes+IP Fails)
+</small>
+
+<div class="clearfix border-bottom py-4">
+  <div class="float-start"> <a (click)="openVerticallyCentered(CreateCensusRepTargets)"  class="btn btn-outline-primary profile"><i class="fa fa-plus"></i> Create CensusRep Targets </a> 
+    <a (click)="openVerticallyCentered(CloneAllTargetsToQuotas)"  class="btn btn-outline-primary profile ms-3"> <i class="fa fa-clone" aria-hidden="true"></i>  Clone All Targets To Quotas </a> </div>    
+  <div class="float-end"> 
+
+    <a class="btn btn-outline-primary profile ms-3"  (click)="openVerticallyCentered(addtargetcontent)"><i class="fa fa-plus"></i> Add Target
+    </a> 
+   </div>
+
+   <ng-template #CreateCensusRepTargets let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title " id="modal-basic-title"> Create CensusRep Targets </h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body text-center">
+    
+      <p> Are you sure confirm to Create CensusRep Targets </p>
+
+<button class="btn btn-primary me-2"> Save </button>
+<button class="btn btn-danger"> Cancel</button>
+
+    </div>
+    <!-- <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Save</button>
+    </div> -->
+  </ng-template> 
+  <ng-template #CloneAllTargetsToQuotas let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title " id="modal-basic-title"> Clone All Targets To Quotas </h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body text-center">
+    
+      <p> Are you sure confirm to Clone All Targets To Quotas </p>
+
+<button class="btn btn-primary me-2"> Save </button>
+<button class="btn btn-danger"> Cancel</button>
+
+    </div>
+
+  </ng-template> 
+
+   <ng-template #addtargetcontent let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title"> </h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <form>
+      
+    
+            <fieldset>
+             <legend> Add Target </legend>
+                       
+            
+            <div class="row mt-2">
+              <div class="col-md-3">
+                <label for="inputPassword4" class="form-label"> Target Type* </label>
+                <select id="inputState" class="form-select" >
+    
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+              </div>
+              <div class="col-md-3">
+                <label for="inputtext" class="form-label">                 
+                 
+
+Target Name* </label>
+                <input type="text" class="form-control" id="inputtext">
+              </div>
+              <div class="col-md-3">
+                <label for="inputtext" class="form-label">                 
+                  Base Price (USD)* </label>
+                <input type="text" class="form-control" id="inputtext">
+              </div>
+              <div class="col-md-3">
+                <label for="inputtext" class="form-label">                 
+                  Requested Members </label>
+                <input type="text" class="form-control" id="inputtext">
+              </div>
+            
+              <div class="col-md-3">
+                <label for="inputEmail4" class="form-label"> Target Closed*</label>
+                <select id="inputState" class="form-select" >
+    
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+              </div>
+            
+              <div class="col-md-3">
+                <label for="inputtext" class="form-label">                 
+                  Incidence Rate* </label>
+                <input type="text" class="form-control" id="inputtext">
+              </div>
+              <div class="col-md-3">
+                <label for="inputEmail4" class="form-label">    Response Rate*</label>
+                <select id="inputState" class="form-select" >
+    
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+              </div>
+            
+              <div class="col-md-3">
+                <label for="inputtext" class="form-label">                 
+                  Target Close Completes </label>
+                <input type="text" class="form-control" id="inputtext">
+              </div>
+             
+            </div>
+            </fieldset>
+           
+            <div class="clearfix border-bottom p-4">
+             
+              <div class="float-end">  <button class="btn btn-danger"> Cancel </button> <button class="btn btn-primary mx-2" (click)="openVerticallyCentered(nextcontent)"> Next </button> <button class="btn btn-success">  Save </button></div>  
+            </div>
+
+            <ng-template #nextcontent let-modal>
+              <div class="modal-header">
+                  <div class="modal-title" id="modal-basic-title" style="width: 20%;">
+                      
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+          
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select> 
+              </div>   
+                <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+              </div>
+              <div class="modal-body">
+             
+               
+                    <div class="container"> 
+              <div class=" row"> 
+              
+              <div class="col-sm-5"> 
+              
+                    <div class="Targeting_box"> 
+                        <h4> Targeting Criteria </h4>
+                        <input type="text" placeholder="Search" class="form-control px-2">
+                        <div class="p-3"> 
+                      <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+                      <label class="form-check-label" for="check1"> Data Append/Cookie </label>
+                    </div>
+              
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                      <label class="form-check-label" for="check2">  Ethnicity </label>
+                    </div>    
+              
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="check3" name="option1" value="something" >
+                      <label class="form-check-label" for="check1">  States / Regions / Divisions </label>
+                    </div>
+                    
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="check4" name="option2" value="something">
+                      <label class="form-check-label" for="check2">  ZIP/ MSA / DMA / County / CMA </label>
+                    </div>    
+              
+                  </div>
+              
+                    </div>
+                  </div>
+              
+                  <div class="col-sm-5"> 
+                   
+                      <div class="Targeting_box"> 
+                          <h4> Option </h4>
+                          <input type="text" placeholder="Search" class="form-control">
+                          <div class="p-3"> 
+                        <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" >
+                        <label class="form-check-label" for="check1"> Data Append/Cookie </label>
+                      </div>
+                
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                        <label class="form-check-label" for="check2">  Ethnicity </label>
+                      </div>    
+                
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check3" name="option1" value="something" >
+                        <label class="form-check-label" for="check1">  States / Regions / Divisions </label>
+                      </div>
+                      
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="check4" name="option2" value="something">
+                        <label class="form-check-label" for="check2">  ZIP/ MSA / DMA / County / CMA </label>
+                      </div>    
+                
+                    </div>
+                
+                      </div>
+                    </div>
+              
+                  </div>
+              </div>
+              <div class="clearfix border-bottom p-4">
+                       
+                <div class="float-end">  <button class="btn btn-danger"> Cancel </button> <button class="btn btn-primary mx-2"> Save </button> </div>  
+              </div>
+      
+              </div>
+      
+            </ng-template> 
+
+      </form>
+
+
+
+    </div>
+    <!-- <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Save</button>
+    </div> -->
+  </ng-template> 
+
+
+
+</div>
+<section class="projecttarget_table">
+  <div class="table-responsive">
+<table #dTable class="table table-striped" style="width:100%" >
+  <thead>
+      <tr>
+          <th>  Target Name </th>
+          <th> Available	</th>
+          <th>  EAC </th>
+          <th> SAC </th>
+          <th> Invites </th>
+          <th> Clicks </th>
+          <th> Completes </th>
+          <th> CUR </th>
+          <th> QSF </th>
+          <th> Terms	 </th>
+          <th> PSTerms	 </th>
+          <th> DF </th> 		
+          <th> OQ	 </th>
+          <th> PS OQ	 </th>
+          <th> Rejects	 </th>
+          <th> FC	 </th>
+          <th> RR (%)	 </th>
+          <th> IR	 </th>
+          <th> ARR	 </th>
+          <th> DR 	 </th>
+          <th>Actions	 </th>
+      </tr>
+
+
+  </thead>
+  <tbody>
+      <tr *ngFor="let projecttargetData of datatables">
+          <td> {{projecttargetData.TargetName}} </td>
+          <td> {{ projecttargetData.Available}}</td>
+          <td> {{ projecttargetData.EAC}}</td>
+          <td>{{ projecttargetData.SAC}} </td>
+          <td> {{ projecttargetData.Invites}}</td>
+          <td>{{ projecttargetData.Clicks}} </td>
+          <td>{{ projecttargetData.Completes}} </td>
+          <td> {{ projecttargetData.CUR}}</td>
+          <td>{{ projecttargetData.QSF}} </td>
+          <td> {{ projecttargetData.Terms}}</td>
+          <td> {{ projecttargetData.PSTerms}}</td>
+          <td> {{ projecttargetData.DF}}</td>
+          <td> {{ projecttargetData.OQ}}</td>
+          <td> {{ projecttargetData.PSOQ}}</td>
+          <td> {{ projecttargetData.Rejects}}</td>
+          <td> {{ projecttargetData.FC}}</td>
+          <td> {{ projecttargetData.RR}}</td>
+          <td> {{ projecttargetData.IR}}</td>
+          <td> {{ projecttargetData.ARR}}</td>
+          <td> {{ projecttargetData.DR}}</td>
+          <td class="targettable">
+            <i class="fa fa-edit" ngbTooltip="Edit Target" (click)="openVerticallyCentered(targetcontent)"> </i>
+             <i class="fa fa-lock" ngbTooltip=" Lock Target"></i>
+              <i class="fa fa-clone" ngbTooltip=" Clone Target" (click)="openVerticallyCentered(CloneTarget)"></i>
+            <i class="fa fa-arrow-right" ngbTooltip=" Next" (click)="openVerticallyCentered(nextcontent)"></i> 
+            <i class="fa fa-at" ngbTooltip=" Resend invitations"></i> 
+            <i class="fa fa-copy" ngbTooltip="Clone Target to Quota" (click)="openVerticallyCentered(copy)"></i>
+            <i class="fa fa-trash" ngbTooltip=" Delete Target" (click)="openVerticallyCentered(delete)"></i>
+          </td>
+         
+      </tr>
+
+
+      <ng-template #CloneTarget let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title"> Clone Target</h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+
+        
+          <div class="col-md-3 pb-3">
+            <label for="inputPassword4" class="form-label"> Target Type* </label>
+
+          <select class="form-select" [(ngModel)]="selectedValue1">
+            <option value="0" selected>Demographic</option>
+            <option value="1"> External </option>
+            <option value="2">Listed Member</option>          
+          </select>
+          </div>
+          
+          <div class="Demographic" *ngIf="selectedValue1 == 0">  
+
+            <form action="">
+
+              <div class="row ">
+               
+               
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Target Name* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Base Price (USD)* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Requested Members </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+
+                <div class="col-md-3">
+                  <label for="inputPassword4" class="form-label"> Target Closed* </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label">Incidence Rate* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+                <div class="col-md-3">
+                  <label for="inputPassword4" class="form-label"> Response Rate* </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Target Close Completes </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+
+                <div class="col-md-3 mt-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Show on site
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label">Target Survey url </label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+
+
+</div>
+
+            </form>
+            <div class="clearfix border-bottom p-4">
+                   
+              <div class="float-end">  <button class="btn btn-danger"> Cancel </button> <button class="btn btn-primary mx-2"> Next </button> <button class="btn btn-success">  Save </button></div>  
+            </div>
+
+
+          </div>
+          <div class="External" *ngIf="selectedValue1 == 1"> 
+
+            <form>          
+              <div class="row">
+               
+                <div class="col-md-3">
+                  <label for="inputEmail4" class="form-label"> Vendor Manager </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="inputPassword4" class="form-label"> Partner Name* </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+  
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Target Name* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+              </div>
+  
+  
+  
+  
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="inputPassword4" class="form-label"> Target Country </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label">Base Price (USD)* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> 
+                    Requested Members </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+                <div class="col-md-3">
+                  <label for="inputEmail4" class="form-label"> Target Closed* </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+            
+              </div>
+  
+  
+  
+              <div class="row">
+               
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Incidence Rate* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> 
+                    External Partner CPI </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> 
+                  
+  External Completes </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+                <div class="col-md-3">
+                  <label for="inputEmail4" class="form-label"> 
+                    Call Back Type </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+            
+              </div>
+  
+  
+              <div class="row">
+               
+  
+                <div class="col-md-3">
+                  <label for="inputEmail4" class="form-label"> 
+                    Response Rate* </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> 
+                    Target Close Completes </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label">                 
+                    External Vendor Email </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+             
+            
+              </div>
+  
+  
+              <div class="row">  
+  
+  
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label">Post Back Complete URL</label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+  
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label"> Survey Success URL </label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+  
+            </div>
+  
+            <div class="row">  
+  
+  
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label"> Survey Terminate URL </label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+  
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label"> Over Target Redirect URL </label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+  
+            </div>
+  
+            <div class="row">    
+  
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label"> External Survey URL</label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+  
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label"> QSF Redirect Url </label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+  
+            </div>
+  
+  
+          
+                
+                 
+                  <div class="clearfix border-bottom p-4">
+                   
+                    <div class="float-end">  <button class="btn btn-danger me-2"> Cancel </button> <button class="btn btn-success">  Save </button></div>  
+                  </div>
+  
+            </form>
+
+            <p class="mt-2"> <b>  External Member Url : </b>  https://www.opinionetwork.com/e/ext?pid=2441579&mid=%%member_id%% </p>
+          </div>
+
+          <div class="Member" *ngIf="selectedValue1 == 2"> 
+
+            <form action="">
+
+              <div class="row ">
+               
+               
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Target Name* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Base Price (USD)* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Requested Members </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+
+                <div class="col-md-3">
+                  <label for="inputPassword4" class="form-label"> Target Closed* </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label">Incidence Rate* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+                <div class="col-md-3">
+                  <label for="inputPassword4" class="form-label"> Response Rate* </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Target Close Completes </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+
+                <div class="col-md-3 mt-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Show on site
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label">Target Survey url </label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+
+
+</div>
+
+            </form>
+
+            <div class="clearfix border-bottom p-4">
+                   
+              <div class="float-end">  <button class="btn btn-danger"> Cancel </button> <button class="btn btn-primary mx-2"> Next </button> <button class="btn btn-success">  Save </button></div>  
+            </div>
+
+          </div>
+        
+
+        
+
+
+
+        </div>
+      
+      </ng-template>  
+
+      <ng-template #copy let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title " id="modal-basic-title">  </h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body text-center">
+        
+          <p> Are you sure confirm  </p>
+    
+    <button class="btn btn-primary me-2"> Save </button>
+    <button class="btn btn-danger"> Cancel</button>
+    
+        </div>
+
+      </ng-template> 
+
+
+      <ng-template #nextcontent let-modal>
+        <div class="modal-header">
+            <div class="modal-title" id="modal-basic-title" style="width: 20%;">
+                
+            <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+    
+              <option *ngFor="let option of options" [value]="option.id">
+                  {{option.name}}      
+              </option>
+            </select> 
+        </div>   
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+       
+         
+              <div class="container"> 
+        <div class=" row"> 
+        
+        <div class="col-sm-5"> 
+        
+              <div class="Targeting_box"> 
+                  <h4> Targeting Criteria </h4>
+                  <input type="text" placeholder="Search" class="form-control px-2">
+                  <div class="p-3"> 
+                <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" checked>
+                <label class="form-check-label" for="check1"> Data Append/Cookie </label>
+              </div>
+        
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                <label class="form-check-label" for="check2">  Ethnicity </label>
+              </div>    
+        
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check3" name="option1" value="something" >
+                <label class="form-check-label" for="check1">  States / Regions / Divisions </label>
+              </div>
+              
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="check4" name="option2" value="something">
+                <label class="form-check-label" for="check2">  ZIP/ MSA / DMA / County / CMA </label>
+              </div>    
+        
+            </div>
+        
+              </div>
+            </div>
+        
+            <div class="col-sm-5"> 
+             
+                <div class="Targeting_box"> 
+                    <h4> Option </h4>
+                    <input type="text" placeholder="Search" class="form-control">
+                    <div class="p-3"> 
+                  <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="check1" name="option1" value="something" >
+                  <label class="form-check-label" for="check1"> Data Append/Cookie </label>
+                </div>
+          
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="check2" name="option2" value="something">
+                  <label class="form-check-label" for="check2">  Ethnicity </label>
+                </div>    
+          
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="check3" name="option1" value="something" >
+                  <label class="form-check-label" for="check1">  States / Regions / Divisions </label>
+                </div>
+                
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="check4" name="option2" value="something">
+                  <label class="form-check-label" for="check2">  ZIP/ MSA / DMA / County / CMA </label>
+                </div>    
+          
+              </div>
+          
+                </div>
+              </div>
+        
+            </div>
+        </div>
+        <div class="clearfix border-bottom p-4">
+                 
+          <div class="float-end">  <button class="btn btn-danger"> Cancel </button> <button class="btn btn-primary mx-2"> Save </button> </div>  
+        </div>
+
+        </div>
+
+      </ng-template> 
+
+    
+      <ng-template #clonecontent let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title"> Do you really want to Clone/Refresh the project "Precision Sample || ORD-733996-B7D6 || Pure Flix TV TV #1 US - Increased CPI after 15n" ? </h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+        
+          
+                 
+                <fieldset>
+                 <legend> Clone </legend>
+                
+                               
+                <div class="mt-2">
+                 
+                  <ul> <li> Default Project Name will be Clone - XXXXX Project </li>
+                  <li> Booked Revenue will be Previous Project Booked Revenue </li>
+                  <li> Projected Revenue will be $0</li>
+                  <li> Bid Revenue will be Previous Project Bid Revenue</li>
+                  <li> Merge will not happen in clone</li>
+                  <li> Project status will be set to Bid</li>
+                  <li> It will copy Project Exclusions exactly</li>
+                  <li> It will copy just Targets only, Pre-Screeners and Quotas will be created from the Targets.</li></ul>
+                
+                 
+                </div>
+                </fieldset>
+               
+                <div class="clearfix border-bottom p-4">
+                 
+                  <div class="float-end">  <button class="btn btn-danger"> Cancel </button> <button class="btn btn-primary mx-2"> Clone </button> </div>  
+                </div>
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Save</button>
+        </div> -->
+      </ng-template> 
+
+      <ng-template #targetcontent let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title"> </h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="col-md-3 pb-3">
+            <label for="inputPassword4" class="form-label"> Target Type* </label>
+
+          <select class="form-select" [(ngModel)]="selectedValue1">
+            <option value="0" selected>Demographic</option>
+            <option value="1"> External </option>
+            <option value="2">Listed Member</option>          
+          </select>
+          </div>
+          
+          <div class="Demographic" *ngIf="selectedValue1 == 0">  
+
+            <form action="">
+
+              <div class="row ">
+               
+               
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Target Name* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Base Price (USD)* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Requested Members </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+
+                <div class="col-md-3">
+                  <label for="inputPassword4" class="form-label"> Target Closed* </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label">Incidence Rate* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+                <div class="col-md-3">
+                  <label for="inputPassword4" class="form-label"> Response Rate* </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Target Close Completes </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+
+                <div class="col-md-3 mt-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Show on site
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label">Target Survey url </label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+
+
+</div>
+<fieldset>
+  <legend> Mass Clone </legend>
+  <small class="mb-3"> Note : To use Mass Clone feature please select at least one criterion from any of the two drop downs or any of the Profile Questions. After clicking on "Mass Clone Quotas" Button, Cloned Quota with counts will be created in a few minutes.</small>
+ 
+ 
+ <div class="row mt-2">
+   <div class="col-md-3">
+     <!-- <label for="inputPassword4" class="form-label">Country</label> -->
+     <select id="inputState" class="form-select" >
+
+         <option *ngFor="let option of options" [value]="option.id">
+             {{option.name}}      
+         </option>
+       </select>
+   </div>
+ 
+   <div class="col-md-3">
+     <!-- <label for="inputEmail4" class="form-label">Lead Source</label> -->
+     <select id="inputState" class="form-select" >
+
+         <option *ngFor="let option of options" [value]="option.id">
+             {{option.name}}      
+         </option>
+       </select>
+   </div>
+ 
+  
+ </div>
+ </fieldset>
+            </form>
+            <div class="clearfix border-bottom p-4">
+                   
+              <div class="float-end">  <button class="btn btn-danger"> Cancel </button> <button class="btn btn-primary mx-2"> Mass Clone Quotos </button> <button class="btn btn-success">  Save </button></div>  
+            </div>
+
+
+          </div>
+          <div class="External" *ngIf="selectedValue1 == 1"> 
+
+            <form>          
+              <div class="row">
+               
+                <div class="col-md-3">
+                  <label for="inputEmail4" class="form-label"> Vendor Manager </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="inputPassword4" class="form-label"> Partner Name* </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+  
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Target Name* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+              </div>
+  
+  
+  
+  
+              <div class="row">
+                <div class="col-md-3">
+                  <label for="inputPassword4" class="form-label"> Target Country </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label">Base Price (USD)* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> 
+                    Requested Members </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+                <div class="col-md-3">
+                  <label for="inputEmail4" class="form-label"> Target Closed* </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+            
+              </div>
+  
+  
+  
+              <div class="row">
+               
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Incidence Rate* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> 
+                    External Partner CPI </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> 
+                  
+  External Completes </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+                <div class="col-md-3">
+                  <label for="inputEmail4" class="form-label"> 
+                    Call Back Type </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+            
+              </div>
+  
+  
+              <div class="row">
+               
+  
+                <div class="col-md-3">
+                  <label for="inputEmail4" class="form-label"> 
+                    Response Rate* </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> 
+                    Target Close Completes </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label">                 
+                    External Vendor Email </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+  
+  
+             
+            
+              </div>
+  
+  
+              <div class="row">  
+  
+  
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label">Post Back Complete URL</label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+  
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label"> Survey Success URL </label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+  
+            </div>
+  
+            <div class="row">  
+  
+  
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label"> Survey Terminate URL </label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+  
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label"> Over Target Redirect URL </label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+  
+            </div>
+  
+            <div class="row">    
+  
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label"> External Survey URL</label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+  
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label"> QSF Redirect Url </label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+  
+            </div>
+  
+  
+          
+                
+                 
+                  <div class="clearfix border-bottom p-4">
+                   
+                    <div class="float-end">  <button class="btn btn-danger me-2"> Cancel </button> <button class="btn btn-success">  Save </button></div>  
+                  </div>
+  
+            </form>
+
+            <p class="mt-2"> <b>  External Member Url : </b>  https://www.opinionetwork.com/e/ext?pid=2441579&mid=%%member_id%% </p>
+          </div>
+
+          <div class="Member" *ngIf="selectedValue1 == 2"> 
+
+            <form action="">
+
+              <div class="row ">
+               
+               
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Target Name* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Base Price (USD)* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Requested Members </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+
+                <div class="col-md-3">
+                  <label for="inputPassword4" class="form-label"> Target Closed* </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label">Incidence Rate* </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+                <div class="col-md-3">
+                  <label for="inputPassword4" class="form-label"> Response Rate* </label>
+                  <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+        
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+                </div>
+
+                <div class="col-md-3">
+                  <label for="inputtext" class="form-label"> Target Close Completes </label>
+                  <input type="text" class="form-control" id="inputtext">
+                </div>
+
+                <div class="col-md-3 mt-4">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Show on site
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <label for="inputtext" class="form-label">Target Survey url </label>
+                <textarea name="" id="" rows="3"></textarea>
+               
+              </div>
+
+
+</div>
+<fieldset>
+  <legend> Mass Clone </legend>
+  <small class="mb-3"> Note : To use Mass Clone feature please select at least one criterion from any of the two drop downs or any of the Profile Questions. After clicking on "Mass Clone Quotas" Button, Cloned Quota with counts will be created in a few minutes.</small>
+ 
+ 
+ <div class="row mt-2">
+   <div class="col-md-3">
+     <!-- <label for="inputPassword4" class="form-label">Country</label> -->
+     <select id="inputState" class="form-select" >
+
+         <option *ngFor="let option of options" [value]="option.id">
+             {{option.name}}      
+         </option>
+       </select>
+   </div>
+ 
+   <div class="col-md-3">
+     <!-- <label for="inputEmail4" class="form-label">Lead Source</label> -->
+     <select id="inputState" class="form-select" >
+
+         <option *ngFor="let option of options" [value]="option.id">
+             {{option.name}}      
+         </option>
+       </select>
+   </div>
+ 
+  
+ </div>
+ </fieldset>
+            </form>
+
+            <div class="clearfix border-bottom p-4">
+                   
+              <div class="float-end">  <button class="btn btn-danger"> Cancel </button> <button class="btn btn-primary mx-2"> Mass Clone Quotos </button> <button class="btn btn-success">  Save </button></div>  
+            </div>
+
+          </div>
+        
+
+        
+
+
+
+        </div>
+        <!-- <div class="modal-footer">
+          <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Save</button>
+        </div> -->
+      </ng-template>      
+    
+      <ng-template #delete let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title " id="modal-basic-title">  </h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+        <div class="modal-body text-center">
+        
+          <p> Are you sure confirm to delete </p>
+    
+    <button class="btn btn-primary me-2"> Save </button>
+    <button class="btn btn-danger"> Cancel</button>
+    
+        </div>
+
+      </ng-template> 
+
+      
+  </tbody>
+  <tfoot>
+  
+</tfoot>
+</table>
+</div>
+</section>
+
+
+</div>
+
+
+
+
+      
+    </div>
+    <div class="tab-pane fade " id="Prescreener" role="tabpanel" aria-labelledby="Prescreener-tab"> 
+
+      <div class="clearfix border-bottom p-4">
+        <div class="float-start"> <a [routerLink]="['']"  class="btn btn-outline-primary profile"> <i class="fa fa-plus"></i> Import Prescreener </a> </div> 
+       
+      <div class="float-end"> <a [routerLink]="['/project/projectcreatenew/addquestion']"  class="btn btn-outline-primary profile"><i class="fa fa-plus"></i> Add New Question </a>  </div>
+      </div>
+
+
+
+      <ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title" id="modal-basic-title"> Custom Question </h4>
+          <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+        </div>
+
+        <div class="modal-body">
+       <div class="row"> 
+
+         <div class="col-lg-8"> 
+            <label for="inputPassword4" class="form-label"> Question Type </label>
+
+            <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+              <option *ngFor="let option of options" [value]="option.id">
+
+                  {{option.name}}    
+
+              </option>
+            </select>   
+          </div>
+
+          <div class="col-lg-4 mt-4"> 
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+              Is Force
+            </label>
+          </div>
+        </div>
+      </div>
+
+          <div class="my-3">
+            <label for="inputtext" class="form-label"> Question Name : </label>
+            <input type="text" class="form-control" id="inputtext">
+          </div>
+        
+
+          <div>
+            <label for="inputtext" class="form-label">Question Text : </label>
+            <textarea name="" id="" cols="30" rows="3"></textarea>
+           
+          </div>
+
+                  
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Save</button>
+        </div>
+      </ng-template>
+
+      
+
+      <div class=" py-3">
+      
+        <div class="accordion" id="accordionExample">
+          <!--ngfor loop started for dynamic data -->
+         
+            <div class="accordion-item" *ngFor="let item of selectedData; let i = index">
+              <h2 class="accordion-header" [id]="'heading'+i">
+             
+<div class="row"> 
+                <button class="accordion-button" [ngClass]="{ 'collapsed': i != 0 }" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse'+i" aria-expanded="true" [attr.aria-controls]="'collapse'+i">
+                  <div class="col-sm-10"> 
+                  <span class="me-5"> 
+               <b class="me-2 question ">  Q {{ i }}. </b>    {{ item.name }}  </span>
+              </div>
+              <div class="col-sm-2">  
+<i class="fa fa-edit mx-2" ngbTooltip="Edit Prescreener"> </i>
+
+<i class="fa fa-bandcamp mx-2" ngbTooltip="Branching" (click)="openVerticallyCentered(branchingdata)"> </i>
+
+<i class="fa fa-arrow-up mx-2" ngbTooltip="Move Up"> </i>
+
+<i class="fa fa-arrow-down mx-2" ngbTooltip="Move Down"> </i>
+
+<i class="fa fa-trash mx-2" ngbTooltip="Delete" (click)="openVerticallyCentered(predelete)"> </i>
+</div>
+
+<ng-template #predelete let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title " id="modal-basic-title">  </h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+  </div>
+  <div class="modal-body text-center">
+  
+    <p> Are you sure confirm to delete </p>
+
+<button class="btn btn-primary me-2"> Save </button>
+<button class="btn btn-danger"> Cancel</button>
+
+  </div>
+
+</ng-template> 
+                </button>
+              </div>
+              </h2>
+            
+
+              <div [id]="'collapse'+i" class="accordion-collapse collapse" [ngClass]="{ 'show': i == 0 }" [attr.aria-labelledby]="'heading'+i" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                      {{ item.data}}
+                    </label>
+                  </div>
+                  
+                  <div class="clearfix border-bottom p-4">
+                     
+                    <div class="float-end">  <button class="btn btn-danger me-2"> Cancel </button>
+                       <button class="btn btn-success">  Save </button></div>  
+                  </div>
+                  
+                </div>
+              </div>
+            </div>
+         
+           
+          </div>
+
+
+          <ng-template #branchingdata let-modal>
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title"> </h4>
+              <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+              
+            
+                    <fieldset>
+                     <legend> Add Branching </legend>
+                               
+                    
+                    <div class="row mt-2">
+                      <div class="col-md-3">
+                        <label for="inputPassword4" class="form-label"> Condition </label>
+                        <select id="inputState" class="form-select" >
+            
+                            <option *ngFor="let option of options" [value]="option.id">
+                                {{option.name}}      
+                            </option>
+                          </select>
+                      </div>
+                      <div class="col-md-3">
+                        <label for="inputtext" class="form-label">                 
+                         
+        
+     
+Question </label>
+                        <input type="text" class="form-control" id="inputtext">
+                      </div>
+
+
+                      <div class="col-md-3">
+                        <label for="inputEmail4" class="form-label"> Operator</label>
+                        <select id="inputState" class="form-select" >
+            
+                            <option *ngFor="let option of options" [value]="option.id">
+                                {{option.name}}      
+                            </option>
+                          </select>
+                      </div>
+
+
+                      <div class="col-md-3">
+                        <label for="inputEmail4" class="form-label"> Options</label>
+                        <select id="inputState" class="form-select" >
+            
+                            <option *ngFor="let option of options" [value]="option.id">
+                                {{option.name}}      
+                            </option>
+                          </select>
+                      </div>
+
+                      <div class="col-md-3">
+                        <label for="inputEmail4" class="form-label"> Actions</label>
+                        <select id="inputState" class="form-select" >
+            
+                            <option *ngFor="let option of options" [value]="option.id">
+                                {{option.name}}      
+                            </option>
+                          </select>
+                      </div>
+
+                      <div class="col-md-3">
+                        <label for="inputEmail4" class="form-label"> Go To</label>
+                        <select id="inputState" class="form-select" >
+            
+                            <option *ngFor="let option of options" [value]="option.id">
+                                {{option.name}}      
+                            </option>
+                          </select>
+                      </div>
+
+                      
+                       
+                        <div class="col-md-3 mt-4">
+
+                          <button class="btn btn-danger me-2">  <i class="fa fa-minus"> </i>  </button>
+                           <button class="btn btn-success">  <i class="fa fa-plus">   </i> </button>
+                      
+                      
+                      
+                      </div>
+</div>
+<div class="row mt-2">     
+                      <div class="col-md-3">
+                 
+                      
+                        <select id="inputState" class="form-select" >
+            
+                            <option *ngFor="let option of options" [value]="option.id">
+                                {{option.name}}      
+                            </option>
+                          </select>
+                      </div> 
+                      <div class="col-md-3">
+                        <select id="inputState" class="form-select" >
+            
+                            <option *ngFor="let option of options" [value]="option.id">
+                                {{option.name}}      
+                            </option>
+                          </select>
+                      </div>
+
+                      <div class="col-md-3">
+                      
+                        <select id="inputState" class="form-select" >
+            
+                            <option *ngFor="let option of options" [value]="option.id">
+                                {{option.name}}      
+                            </option>
+                          </select>
+                      </div>
+                      <div class="col-md-3">
+                     
+                        <select id="inputState" class="form-select" >
+            
+                            <option *ngFor="let option of options" [value]="option.id">
+                                {{option.name}}      
+                            </option>
+                          </select>
+                      </div>
+                      <div class="col-md-3">
+                       
+                        <select id="inputState" class="form-select" >
+            
+                            <option *ngFor="let option of options" [value]="option.id">
+                                {{option.name}}      
+                            </option>
+                          </select>
+                      </div>
+                      <div class="col-md-3">
+                     
+                        <select id="inputState" class="form-select" >
+            
+                            <option *ngFor="let option of options" [value]="option.id">
+                                {{option.name}}      
+                            </option>
+                          </select>
+                      </div>
+                    </div>
+               
+                    <div class="row mt-2">  
+                      <div class="col-md-3">
+                        <label for="inputEmail4" class="form-label"> Go To</label>
+                        <select id="inputState" class="form-select" >
+            
+                            <option *ngFor="let option of options" [value]="option.id">
+                                {{option.name}}      
+                            </option>
+                          </select>
+                      </div>
+                      
+                      <div class="col-md-3 mt-4">
+                        <button class="btn btn-danger me-2">  <i class="fa fa-minus"> </i>  </button>
+                        <button class="btn btn-success">  <i class="fa fa-plus">   </i> </button>
+                     
+                      </div>
+                    
+                    
+                 
+                     
+                    </div>
+                    </fieldset>
+                   
+                    <div class="clearfix border-bottom p-4">
+                     
+                      <div class="float-end">  <button class="btn btn-danger me-2"> Cancel </button>
+                         <button class="btn btn-success">  Save </button></div>  
+                    </div>
+        
+              </form>
+        
+        
+        
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Save</button>
+            </div> -->
+          </ng-template> 
+
+
+         
+        </div>
+
+
+    </div>
+    <div class="tab-pane fade" id="Quotas" role="tabpanel" aria-labelledby="Quotas-tab">
+      <ul class="quotas_items_main">        
+        <li> <div class="form-check form-switch ">
+          <label class="form-check-label" for="flexSwitchCheckDefault">Soft Launch</label>
+          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />        
+        </div></li>
+           <li>
+            <div class="form-check">
+              <label class="form-check-label" for="flexSwitchCheckDefault"> SL Target</label>
+              <input type="number" hide-zero="" name="SLTargetCompletes" ng-model="quotas[0].SLTargetCompletes" class="input_range ng-pristine ng-untouched ng-valid ng-empty">
+                     </div>
+           </li>
+           <li><a href="#">SL Save  <i class="fa fa-save"></i> </a></li>
+           <li><span class="me-3">Quota Type : </span>
+            <div class="form-check form-check-inline ">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">Completes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">Accesses</label>
+            </div></li>
+           <li><div class="form-check form-switch">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Throttling On</label>
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" />        
+          </div></li>
+           <li> <a href="#">Refresh  <i class="fa fa-refresh"></i> </a></li>
+           <li><a href="#">Add Quota  <i class="fa fa-plus"></i> </a></li>
+           <li> <a href="#">Save  <i class="fa fa-save"></i> </a></li>
+           <li> <a href="#">Save and Sync With </a></li>
+         
+          </ul>
+          <section class="projectquota_table">
+            <div class="table-responsive">
+          <table #dTable class="table table-striped" style="width:100%" >
+            <thead>
+                <tr>
+                    <th>  Quota Name </th>
+                    <th> FqId	</th>
+                    <th>  Quota% </th>
+                    <th>  Quota# </th>
+                    <th> Active </th>
+                    <th> Accesses </th>
+                    <th> Completes </th>
+                    <th> Terms </th>
+                    <th> OQs </th>
+                    <th> BOQs </th>
+                    <th> IR	 </th>
+                    <th> DR	 </th>
+                    <th>Actions	 </th>
+                    <th> Delete 	 </th>
+                </tr>
+          
+          
+            </thead>
+            <tbody>
+              <tr *ngFor="let projectquotatData of datatables1">
+  <td colspan="3"> Total Quota Number  </td>
+  <td>  <input type="text"> </td>
+  <td> </td>
+
+  <td> {{ projectquotatData.Accesses}}</td>
+  <td>{{ projectquotatData.Completes}} </td>
+  <td>{{ projectquotatData.Terms}} </td>
+  <td> {{ projectquotatData.OQs}}</td>
+  <td> {{ projectquotatData.BOQs}}</td>
+  <td> {{ projectquotatData.IR}}</td>
+  <td> {{ projectquotatData.DR}}</td>
+  <td> </td>
+  <td> <div class="form-check form-check-inline">
+    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  </div></td>
+
+</tr>
+
+                <tr *ngFor="let projectquotatData of datatables1">
+                    <td> <input type="text">  </td>
+                    <td> {{ projectquotatData.FqId}}</td>
+                    <td>  <input type="text"> </td>
+                    <td> <input type="text">  </td>
+                    <td> <i class="fa fa-check" aria-hidden="true"></i></td>
+                    <td> {{ projectquotatData.Accesses}}</td>
+                    <td>{{ projectquotatData.Completes}} </td>
+                    <td>{{ projectquotatData.Terms}} </td>
+                    <td> {{ projectquotatData.OQs}}</td>
+                    <td> {{ projectquotatData.BOQs}}</td>
+                    <td> {{ projectquotatData.IR}}</td>
+                    <td> {{ projectquotatData.DR}}</td>                   
+                    <td class="targettable"> 
+                     
+                       <i class="fa fa-lock" ngbTooltip="Lock Quota"></i>
+                        <i class="fa fa-copy" ngbTooltip="Clone Quota" (click)="openVerticallyCentered(quotaclone)"></i>
+                      <i class="fa fa-arrow-right" ngbTooltip="Next " (click)="openVerticallyCentered(quotanext)"></i>
+                   
+                        <i class="fa fa-trash" ngbTooltip="Delete Quota" (click)="openVerticallyCentered(quotadelete)"></i>
+                    </td>
+                    <td> <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    </div></td>
+                </tr>
+
+                <ng-template #quotaclone let-modal>
+                  <div class="modal-header">
+                    <h4 class="modal-title " id="modal-basic-title">  </h4>
+                    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+                  </div>
+                  <div class="modal-body text-center">                  
+                    <p> Are you sure confirm to clone </p>
+              
+              <button class="btn btn-primary me-2"> Save </button>
+              <button class="btn btn-danger"> Cancel</button>
+              
+                  </div>
+              
+                </ng-template> 
+
+                <ng-template #quotanext let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title"> Quota Demographics </h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body">
+      <form>
+      
+        
+    
+            <fieldset>
+             <legend> Q1. Age </legend>
+                       
+            
+            <div class="row mt-2">
+              <div class="col-md-3">
+                <label for="inputPassword4" class="form-label"> Age Lower Limit </label>
+                <select id="inputState" class="form-select" >
+    
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+              </div>
+                        
+                                   
+              <div class="col-md-3">
+                <label for="inputEmail4" class="form-label"> Age Upper Limit </label>
+                <select id="inputState" class="form-select" >
+    
+                    <option *ngFor="let option of options" [value]="option.id">
+                        {{option.name}}      
+                    </option>
+                  </select>
+              </div>
+    
+             
+            </div>
+            </fieldset>
+
+            <fieldset class="mt-3">
+              <legend> Q2. Country </legend>
+                        
+             
+             <div class="row mt-2">
+               <div class="col-md-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    UNITED STATES OF AMERICA
+                  </label>
+                </div>
+               </div>
+               <div class="col-md-3"> 
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked1" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    All
+                  </label>
+                </div>
+               </div>
+                  
+              
+             </div>
+             </fieldset>
+
+             <fieldset class="mt-3">
+              <legend> Q3. Ethnicity </legend>
+                        
+             
+             <div class="row mt-2">
+               <div class="col-md-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    Hispanic
+                  </label>
+                </div>
+               </div>
+               <div class="col-md-3"> 
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked2" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    All
+                  </label>
+                </div>
+               </div>
+                  
+
+              
+             </div>
+             </fieldset>
+
+
+             <fieldset class="mt-3">
+              <legend> Q3. Gender </legend>
+                        
+             
+             <div class="row mt-2">
+               <div class="col-md-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Female
+                  </label>
+                </div>
+               </div>
+               <div class="col-md-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+                  <label class="form-check-label" for="defaultCheck1">
+                    Male
+                  </label>
+                </div>
+               </div>
+               <div class="col-md-3"> 
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    All
+                  </label>
+                </div>
+               </div>
+                 
+              
+             </div>
+             </fieldset>
+
+<p class="mt-3 mb-0"> Quota Connected to : </p>
+             <fieldset >
+              <legend> Q4. Targets </legend>
+                           
+             <div class="row mt-2 px-2">
+
+           
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                  <label class="form-check-label" for="flexCheckChecked">
+                    All
+                  </label>
+                </div>
+              
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    CINT-API
+                  </label>
+                </div>
+              
+              
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    24-34, M/F
+                  </label>
+                </div>
+              
+             
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    45-54 M
+                  </label>
+                </div>
+             
+             
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                  <label class="form-check-label" for="defaultCheck1">
+                    35-44
+                  </label>
+                </div>
+               
+
+              
+             </div>
+             </fieldset>
+ 
+            <div class="clearfix border-bottom p-4">
+             
+              <div class="float-end">  <button class="btn btn-success">  Save </button></div>  
+            </div>
+
+      </form>
+
+
+
+    </div>
+    <!-- <div class="modal-footer">
+      <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Save</button>
+    </div> -->
+  </ng-template> 
+                
+  <ng-template #quotadelete let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title " id="modal-basic-title">  </h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+    </div>
+    <div class="modal-body text-center">
+    
+      <p> Are you sure confirm to delete </p>
+
+<button class="btn btn-primary me-2"> Save </button>
+<button class="btn btn-danger"> Cancel</button>
+
+    </div>
+
+  </ng-template> 
+
+            </tbody>
+            <tfoot>
+            
+          </tfoot>
+          </table>
+          </div>
+          </section>
+                  </div>
+    
+  
+    <div class="tab-pane fade" id="Actions" role="tabpanel" aria-labelledby="Actions-tab"> 
+
+<div class="p-2"> 
+
+<div class="row"> 
+
+<div class="col-sm-6">
+
+  <div class="para-1 box-shadow1"> 
+
+
+    <div class="clearfix border-bottom pb-2">
+      <div class="float-start"> <h4>   Bidding </h4> </div>    
+      <div class="float-end"> <img src="../../../assets/img/bidding.png" alt="" class="img-fluid img-sm">  </div>
+    </div>
+
+
+    <ul class="list-unstyled ulstyles">
+<li> <a href="#"> Bid Report </a></li>
+<li> <a href="#"> Apply Project Type </a> </li>
+<li> <a href="#"> Apply IR </a>  </li>
+<li> <a href="#"> 
+  Survey Category
+  Exclusions
+ </a> </li>
+<li> <a href="#"> 
+  Project Exclusions
+</a> </li>
+<li> <a href="#"> Update Target Counts </a> </li>
+
+    </ul>
+
+</div>
+
+</div>
+
+<div class="col-sm-6">
+
+  <div class="para-1 box-shadow1"> 
+
+    <div class="clearfix border-bottom pb-2">
+      <div class="float-start"> <h4>   Fielding </h4> </div>    
+      <div class="float-end"> <img src="../../../assets/img/fielding.png" alt="" class="img-fluid img-sm">  </div>
+    </div>
+
+
+
+    <ul class="list-unstyled ulstyles">
+      <li>
+            <a href="#" >Redirects</a>
+        </li>
+        <li>
+            <a href="#"  >Upload Distinct URLs</a>
+        </li>
+      
+        <li>
+            <a href="#" >Show on Site</a>
+        </li>
+        <li>
+            <a href="#" >Send Invitation</a>
+        </li>
+        <li>
+            <a href="#"  >ReSend Invitation</a>
+        </li>
+        <li>
+            <!----><a href="#" >Move Project to Green</a><!---->
+        </li>
+        <li>
+            <a (click)="myFunction()">
+                Test Project
+            </a>
+        </li>
+        <li>
+            <a href="#" >Test Member Id's</a>
+        </li>
+        <li>
+            <a href="#">Test Email</a>
+        </li>
+
+     
+    </ul>
+
+</div>
+
+</div>
+
+
+</div>
+
+<div class="row"> 
+
+  <div class="col-sm-6">
+  
+    <div class="para-1 box-shadow1"> 
+  
+  
+      <div class="clearfix border-bottom pb-2">
+        <div class="float-start"> <h4>   Invoicing </h4> </div>    
+        <div class="float-end"> <img src="../../../assets/img/invoicing.png" alt="" class="img-fluid img-sm">  </div>
+      </div>
+  
+  
+      <ul class="list-unstyled ulstyles">
+  <li> <a [routerLink]="['/project/mergeprojects']" routerLinkActive="is-active"> Merge Projects </a></li>
+
+  <li> <a href="#"> Child Projects </a>  </li>
+  
+  <li> <a [routerLink]="['/project/submitinvoice']" routerLinkActive="is-active"> Submit For Invoice </a>  </li>
+  
+  <li> <a [routerLink]="['/project/importuid']" routerLinkActive="is-active">   Import User Invitation Guids </a>  </li>
+  
+
+
+      </ul>
+  
+  </div>
+  
+  </div>
+  
+  <div class="col-sm-6">
+  
+    <div class="para-1 box-shadow1"> 
+  
+      <div class="clearfix border-bottom pb-2">
+        <div class="float-start"> <h4>   Reporting </h4> </div>    
+        <div class="float-end"> <img src="../../../assets/img/reporting.png" alt="" class="img-fluid img-sm">  </div>
+      </div>
+  
+      <ul class="list-unstyled ulstyles">
+        <li>
+            <a href="#" >Prescreener Report</a>
+        </li>
+     
+        <li>
+            <a href="#" >Fielding Report</a>
+        </li>
+        <li>
+            <a href="#" >Sample Logs</a>
+        </li>
+        <li>
+            <a href="#"  >Project Logs</a>
+        </li>
+        <li>
+            <a href="#">
+                Project Log
+                Enhancement
+            </a>
+        </li>
+        <li>
+            <a href="#" >Project Drop Box</a>
+        </li>
+       
+        <li>
+            <a href="#" >Download Target PII</a>
+        </li>
+    </ul>
+  
+    
+  
+  </div>
+  
+  </div>
+  
+  
+  </div>
+
+
+</div>
+
+
+
+    </div>
+  </div>
+  </section>

@@ -1,0 +1,55 @@
+
+.client_forms .row{
+    margin: 20px;
+  }
+  .client_forms .profile{
+    margin-top: 7%;
+  }
+  .client_forms .profile{
+      background: #000;
+      color: #fff;
+  }
+  .client_table{
+    padding: 30px;
+  }
+  .client_table .fa-edit{
+    vertical-align: middle;
+    color: blue;
+    margin-right: 5px;
+  }
+  .client_table .fa-trash{
+    vertical-align: middle;
+    color: red;
+    margin-left: 5px;
+  }
+
+
+
+  .nav-tabs .nav-link{
+    color: #000;
+    font-weight: 600;
+  }
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+    border-top: 2px solid #000;
+  }
+  .form-switch .form-check-input{
+    width: 60px;
+    height: 30px;
+  }
+  .form-switch label{
+    margin: 7px;
+    color: #000;
+    font-weight: 600;
+  }
+  .tab-content  .row{
+    margin: 20px 0;
+  }
+  .createuser_bottombtn{
+    float: right;
+  }
+  .createuser_bottombtn .btn-danger{
+  margin: 0 10px;
+  }
+  .createuser_bottombtn .btn i{
+    margin-right: 10px;
+    }

@@ -1,0 +1,24 @@
+
+.client_forms .row{
+    margin: 20px;
+  }
+  .client_forms .profile{
+    margin-top: 7%;
+  }
+  .client_forms .profile{
+      background: #000;
+      color: #fff;
+  }
+  .client_table{
+    padding: 30px;
+  }
+  .client_table .fa-edit{
+    vertical-align: middle;
+    color: blue;
+    margin-right: 5px;
+  }
+  .client_table .fa-trash{
+    vertical-align: middle;
+    color: red;
+    margin-left: 5px;
+  }

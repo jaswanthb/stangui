@@ -1,0 +1,220 @@
+<app-navabr> </app-navabr>
+  <section id="content-wrapper" class="p-0">
+    <div class="clearfix border-bottom p-4">
+      <div class="float-start">  <h2 class="mb-0">Projects</h2> </div>    
+      <div class="float-end">    <a  [routerLink]="['/project/projectcreatenew']" routerLinkActive="is-active" class="btn btn-outline-primary profile"> <i class="fa fa-plus"> </i> Create New </a>  </div>
+    </div>
+    <div class="p-4">
+    <section class="project_forms">
+      <div class="row">
+        <div class="col-md-3">
+          <label for="inputEmail4" class="form-label">Project #</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-3">
+          <label for="inputPassword4" class="form-label"> Project Name</label>
+          <input type="password" class="form-control" id="inputPassword4">
+        </div>
+        <div class="col-md-3">
+          <label for="inputEmail4" class="form-label">Status</label>
+          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+            <option *ngFor="let option of options" [value]="option.id">
+                {{option.name}}      
+            </option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="inputPassword4" class="form-label">Client</label>
+          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+            <option *ngFor="let option of options" [value]="option.id">
+                {{option.name}}      
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <label for="inputEmail4" class="form-label">Sales Person</label>
+          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+            <option *ngFor="let option of options" [value]="option.id">
+                {{option.name}}      
+            </option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="inputPassword4" class="form-label"> Project Manager</label>
+          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+            <option *ngFor="let option of options" [value]="option.id">
+                {{option.name}}      
+            </option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="inputEmail4" class="form-label">Project Manager #2</label>
+          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+            <option *ngFor="let option of options" [value]="option.id">
+                {{option.name}}      
+            </option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="inputPassword4" class="form-label">Invoice #</label>
+          <input type="email" class="form-control" id="inputEmail4">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <label for="inputEmail4" class="form-label">Date Range</label>
+          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+            <option *ngFor="let option of options" [value]="option.id">
+                {{option.name}}      
+            </option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="inputPassword4" class="form-label"> Begin Date</label>
+          <input type="date" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+        </div>
+        <div class="col-md-3">
+          <label for="inputEmail4" class="form-label">End Date</label>
+          <input type="date" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">         
+        </div>
+        <div class="col-md-3">
+          <label for="inputPassword4" class="form-label">Created By</label>
+          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+            <option *ngFor="let option of options" [value]="option.id">
+                {{option.name}}      
+            </option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <label for="inputEmail4" class="form-label">Survey Category</label>
+          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+            <option *ngFor="let option of options" [value]="option.id">
+                {{option.name}}      
+            </option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label for="inputPassword4" class="form-label"> Is Deleted</label>
+          <select id="inputState" class="form-select" [(ngModel)]="selectedValue">
+
+            <option *ngFor="let option of options" [value]="option.id">
+                {{option.name}}      
+            </option>
+          </select>
+        </div>
+
+        <div class="col-md-3 mt-4">
+       <button class="btn btn-primary"> Search </button>
+        
+        </div>
+        
+      </div>
+    </section>
+   
+    <section class="project_table">
+        <div class="table-responsive">
+      <table #dTable class="table table-striped" style="width:100%" >
+        <thead>
+            <tr>
+                <th> Priority </th>
+                <th> Project #</th>
+                <th>  Project Name </th>
+                <th> Client </th>
+                <th> Status </th>
+                <th> Date </th>
+
+                <th> Invited </th>
+                <th> Clicks </th>
+                <th> Completes </th>
+                <th> Terms </th>
+                <th> OQs </th>
+                <th> Field IR	 </th>
+                <th> Bid IR	 </th>
+
+                <th> Median LOI </th> 		
+                <th> % Complete	 </th>
+                <th>Actions	 </th>
+            </tr>
+
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let ProjectData of datatables">
+                <td> {{ProjectData.Priority}} </td>
+                <td> {{ ProjectData.Project}}</td>
+                <td> {{ ProjectData.ProjectName}}</td>
+                <td>{{ ProjectData.Client}} </td>
+                <td> {{ ProjectData.Status}}</td>
+                <td>{{ ProjectData.Date}} </td>
+                <td> {{ ProjectData.Invited}}</td>
+                <td> {{ ProjectData.Clicks}}</td>
+                <td>{{ ProjectData.Completes}} </td>
+                <td> {{ ProjectData.Terms}}</td>
+                <td>{{ ProjectData.OQs}} </td>
+                <td> {{ ProjectData.FieldIR}}</td>
+                <td> {{ ProjectData.BidIR}}</td>
+                <td> {{ ProjectData.MedianLOI}}</td>
+                <td> {{ ProjectData.Complete}}</td>
+                <!-- <td> {{ ProjectData.Actions}}</td> -->
+                <td><i class="fa fa-clone" ngbTooltip="Clone Project" (click)="openVerticallyCentered(clonecontent)"></i></td>
+               
+            </tr>
+            <ng-template #clonecontent let-modal>
+              <div class="modal-header">
+                <h4 class="modal-title" id="modal-basic-title"> Do you really want to Clone/Refresh the project "Precision Sample || ORD-733996-B7D6 || Pure Flix TV TV #1 US - Increased CPI after 15n" ? </h4>
+                <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+              </div>
+              <div class="modal-body">
+              
+                
+                       
+                      <fieldset>
+                       <legend> Clone </legend>
+                      
+                                     
+                      <div class="mt-2">
+                       
+                        <ul> <li> Default Project Name will be Clone - XXXXX Project </li>
+                        <li> Booked Revenue will be Previous Project Booked Revenue </li>
+                        <li> Projected Revenue will be $0</li>
+                        <li> Bid Revenue will be Previous Project Bid Revenue</li>
+                        <li> Merge will not happen in clone</li>
+                        <li> Project status will be set to Bid</li>
+                        <li> It will copy Project Exclusions exactly</li>
+                        <li> It will copy just Targets only, Pre-Screeners and Quotas will be created from the Targets.</li></ul>
+                      
+                       
+                      </div>
+                      </fieldset>
+                     
+                      <div class="clearfix border-bottom p-4">
+                       
+                        <div class="float-end">  <button class="btn btn-danger"> Cancel </button> <button class="btn btn-primary mx-2"> Clone </button> </div>  
+                      </div>
+              </div>
+              <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Save</button>
+              </div> -->
+            </ng-template>   
+            
+        </tbody>
+        <tfoot>
+        
+      </tfoot>
+    </table>
+</div>
+    </section>
+  </div>
+  </section>

@@ -1,0 +1,40 @@
+<app-navabr> </app-navabr>
+<div class="clearfix border-bottom p-4">
+    <div class="float-start">  <h2 class="mb-0"> profiles </h2> </div>    
+    <div class="float-end">  <a class="btn btn-outline-primary profile" (click)="open()"> <i class="fa fa-plus"></i> Create New </a>   </div>
+  </div>
+
+
+    
+       
+  <section class="client_table">
+    <div class="table-responsive">
+  <table #dTable class="table table-striped" style="width:100%" >
+    <thead>
+        <tr>
+            <th>  profileName  </th>
+                
+            <th> Actions </th>
+        </tr>
+
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let UserData of datatables">
+            <td> {{UserData. profileName}} </td>
+            <!-- <td> {{ UserData.Actions}}</td> -->
+          
+            <td> <a [routerLink]="['/profile/profilequestions']" routerLinkActive="is-active" class="">    <i class="fa fa-edit" ngbTooltip="Edit"> </i> </a> <i class="fa fa-trash" ngbTooltip="Delete"> </i> </td>           
+        </tr>
+      
+        
+    </tbody>
+    <tfoot>
+    
+  </tfoot>
+</table>
+</div>
+</section>
+
+
+

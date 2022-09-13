@@ -1,0 +1,71 @@
+<div > 
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light px-5 fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand"  [routerLink]="['/project']"> SAMPLE TOOL</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+     
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">      
+        <form class="d-flex ms-auto me-4">
+          <input class="form-control" type="search" placeholder="Search Projects" aria-label="Search">
+          <button class="btn btn-warning" type="submit"> <i class="fa fa-search" aria-hidden="true"></i></button>
+        </form>   
+        <div class="notifi">  
+         <i class="fa fa-bell-o" aria-hidden="true">  </i>  
+<span class="bagde "> 7 </span>
+        </div>
+        <div ngbDropdown class="profile_dd mx-2">
+          <a type="button" class="" id="dropdownBasic1" ngbDropdownToggle> <i class="fa fa-user-circle-o" aria-hidden="true"></i> </a>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <button ngbDropdownItem>  <a class=""  [routerLink]="['/user/useredit']">  <i class="fa fa-cog" aria-hidden="true"></i> Manage Profile </a></button>
+          
+          </div>
+        </div>
+        <a class="" [routerLink]="['/login']"> <i class="fa fa-sign-out" aria-hidden="true"></i>  </a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a> -->
+
+
+<div id="wrapper">
+<aside id="sidebar-wrapper">
+<ul class="sidebar-nav">
+<li class="active">
+  <a  [routerLink]="['/project']" routerLinkActive="active-link" > <i class="fa fa-share"></i>Projects</a>
+</li>
+<li>
+  <a [routerLink]="['/Client']"  routerLinkActive="active-link" > <i class="fa fa-leaf"></i>Clients</a>
+</li>
+<!-- <li>
+  <a  [routerLink]="['/User']"  routerLinkActive="active-link"> <i class="fa fa-users"></i>Users</a>
+</li> -->
+<li>
+  <a  [routerLink]="['/Vendors']"  routerLinkActive="active-link"> <i class="fa fa-bus"></i>Vendors</a>
+</li>
+
+ <li>
+  <div ngbDropdown class="side_dd">
+    <a type="button" class="" id="dropdownBasic1" ngbDropdownToggle><i class="fa fa-user"></i> Admin </a>
+    <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+      <button ngbDropdownItem> <a  [routerLink]="['/User']">  Users </a> </button>
+      <button ngbDropdownItem>  <a  [routerLink]="['/landingpage']">  LandingPage </a>  </button>
+      <button ngbDropdownItem>  <a  [routerLink]="['/profile']">  Profiles </a>  </button>
+      <button ngbDropdownItem>  <a  [routerLink]="['/externalpartners']">  External Partners </a>  </button>
+      <button ngbDropdownItem>  <a  [routerLink]="['/reports']"> Reports </a>  </button>
+      <button ngbDropdownItem>  <a  [routerLink]="['/memberids']"> Member Ids </a>  </button>
+    </div>
+  </div>
+</li> 
+
+
+
+
+</ul>
+</aside>
+
+</div>
